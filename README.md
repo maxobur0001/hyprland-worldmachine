@@ -6,6 +6,18 @@ Inspired by OneShot: World Machine Edition
 ![Rofi, lavat, dunst, fastfetch](https://github.com/maxobur0001/hyprland-worldmachine/blob/main/assets/screenshot1.png?raw=true)
 ![OneShot, fastfetch, cava](https://github.com/maxobur0001/hyprland-worldmachine/blob/main/assets/screenshot2.png?raw=true)
 
+# Dependencies
+* dunst
+* hyprland
+* rofi
+* imagemagick
+* kitty
+* swaybg
+* qutebrowser (optional)
+
+# How to install
+Unpack contents in ~/.config/worldmachine, then make install.sh executable (chmod +x ./install.sh) and start it. 
+
 # Controls
 * SUPER + Vim cursor control - Move window
 * SUPER + Numbers - Move window throught a workspaces

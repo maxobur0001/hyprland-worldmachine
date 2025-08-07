@@ -1,0 +1,6 @@
+#!/bin/bash
+
+activeworkspace=$(hyprctl activeworkspace | grep -E "workspace ID [0-9]" | sed -e 's/.*workspace ID \([0-9]*\).*/\1/' | sed -z 's/\n//g')
+rawworkspaces=$(hyprctl workspaces | grep -E "workspace ID [0-9]" | sed -e 's/.*workspace ID \([0-9]*\).*/\1/' | sort -n | sed -z 's/\n/  /g')
+workspaces=$(echo $rawworkspaces | sed -e "s/\\($activeworkspace\\)/[\\1]/g")
+dunstify "$workspaces" -a service -h string:x-dunst-stack-tag:volume_notif
