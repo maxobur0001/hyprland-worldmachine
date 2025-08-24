@@ -1,0 +1,6 @@
+#!/bin/bash
+
+screenshot="/tmp/Screenshot $(date "+%Y.%m.%d at %H:%M").png"
+grim -g "$(slurp)" "${screenshot}"
+wl-copy < "${screenshot}"
+notify-send -i "${screenshot}" -u normal -a screenshot "Screenshot saved in clipboard"
